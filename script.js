@@ -1,11 +1,12 @@
 const gate = document.getElementById('gate');
 const openBtn = document.getElementById('openInvite');
 const content = document.getElementById('content');
+const schoolHeader = document.querySelector('.school-header');
 
 function openInvitation(){
   gate.classList.add('open');
   content.classList.add('show');
-  setTimeout(() => document.querySelector('.hero')?.scrollIntoView({behavior:'smooth'}), 700);
+  setTimeout(() => schoolHeader?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 700);
 }
 openBtn.addEventListener('click', openInvitation);
 
