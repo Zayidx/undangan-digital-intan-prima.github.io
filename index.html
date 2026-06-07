@@ -276,16 +276,37 @@
           >
             Buka Google Maps
           </a>
+          <section class="countdown-panel" aria-label="Hitung mundur menuju hari acara" data-aos="fade-up" data-aos-delay="740">
+            <p class="countdown-title">Menuju Hari H</p>
+            <div class="countdown-grid">
+              <div class="countdown-item countdown-item-days">
+                <b id="countdownDays">00</b>
+                <span>Hari</span>
+              </div>
+              <div class="countdown-item">
+                <b id="countdownHours">00</b>
+                <span>Jam</span>
+              </div>
+              <div class="countdown-item">
+                <b id="countdownMinutes">00</b>
+                <span>Menit</span>
+              </div>
+              <div class="countdown-item">
+                <b id="countdownSeconds">00</b>
+                <span>Detik</span>
+              </div>
+            </div>
+            <p class="countdown-caption" id="countdownCaption">21 Juni 2026, 10.00 WIB</p>
+          </section>
         </section>
 
-        <footer class="footer-bar reveal">
+        <footer class="footer-bar">
           <a
             class="medsos"
             href="https://www.instagram.com/intanprimaartschool/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Buka Instagram Intan Prima Art School"
-            data-aos="fade-right"
           >
             <img src="assets/instagram.png" width="14px" alt="" />Intanprimaartschool
           </a>
@@ -295,13 +316,25 @@
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Chat WhatsApp Intan Prima Art School"
-            data-aos="fade-left"
           >
             <img src="assets/whatsapp.png" width="20px" alt="" />0821-2323-3205
           </a>
         </footer>
       </div>
     </main>
+
+    <audio id="bgMusic" src="assets/music.mp3" loop preload="auto"></audio>
+    <button
+      class="music-toggle"
+      id="musicToggle"
+      type="button"
+      aria-label="Putar atau hentikan musik"
+      aria-pressed="false"
+    >
+      <span class="music-disc">
+        <span class="music-disc-core"></span>
+      </span>
+    </button>
 
     <script src="script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
