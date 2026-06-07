@@ -6,7 +6,10 @@ const schoolHeader = document.querySelector('.school-header');
 function openInvitation(){
   gate.classList.add('open');
   content.classList.add('show');
-  setTimeout(() => schoolHeader?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 700);
+  setTimeout(() => {
+    window.AOS?.refreshHard();
+    schoolHeader?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 700);
 }
 openBtn.addEventListener('click', openInvitation);
 
