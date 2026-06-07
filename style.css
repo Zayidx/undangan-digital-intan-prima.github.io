@@ -1,0 +1,118 @@
+@font-face{
+  font-family:'Brittany Signature';
+  src:url('assets/font/BrittanySignature.ttf') format('truetype');
+  font-weight:400;
+  font-style:normal;
+  font-display:swap;
+}
+:root{
+  --maroon:#72051a;
+  --maroon-dark:#570012;
+  --cream:#fff2bd;
+  --gold:#d8bd67;
+  --text:#fff7ec;
+  --muted:#e8d5cc;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  min-height:100vh;
+  display:grid;
+  place-items:center;
+  background:#1d1d1d;
+  color:var(--text);
+  font-family:Montserrat,system-ui,sans-serif;
+}
+.phone-frame{
+  position:relative;
+  width:min(100vw,420px);
+  min-height:100vh;
+  overflow:hidden;
+  background:var(--maroon);
+  box-shadow:0 0 60px rgba(0,0,0,.45);
+}
+.bg-building{
+  position:fixed;
+  inset:0;
+  width:min(100vw,420px);
+  margin:auto;
+  background:
+    linear-gradient(120deg,rgba(255,255,255,.08) 34%,rgba(255,255,255,.02) 34% 100%),
+    url('assets/backgroundsekolah.png') center/cover no-repeat;
+  transform:scale(1.05);
+  z-index:0;
+}
+.burgundy-filter{
+  position:fixed;
+  inset:0;
+  width:min(100vw,420px);
+  margin:auto;
+  background:rgba(112,5,26,.82);
+  z-index:1;
+  pointer-events:none;
+}
+.content{position:relative;z-index:2;padding-bottom:34px;opacity:0;transform:translateY(18px);transition:1s ease}
+.content.show{opacity:1;transform:none}
+.gate{
+  position:fixed;
+  z-index:10;
+  inset:0;
+  width:min(100vw,420px);
+  margin:auto;
+  background:transparent;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  transition:visibility .5s ease;
+}
+.door{position:absolute;top:0;bottom:0;width:50%;background:#6f0619;transition:transform 1.25s cubic-bezier(.68,-.2,.28,1.08);box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)}
+.door-left{left:0;transform-origin:left}.door-right{right:0;transform-origin:right}
+.gate.open .door-left{transform:translateX(-101%)}.gate.open .door-right{transform:translateX(101%)}
+.gate.open .seal{transform:scale(.2);opacity:0}.gate.open .tap-hint{opacity:0}
+.gate.open .cover-ornament-top{transform:translateY(-120%);opacity:0}
+.gate.open .cover-ornament-bottom{transform:rotate(180deg) translateY(-120%);opacity:0}
+.gate.open{visibility:hidden;transition-delay:1.25s}
+.gate-line{position:absolute;top:0;bottom:0;width:1px;background:rgba(0,0,0,.3)}
+.seal{
+  width:122px;height:122px;border-radius:50%;border:0;cursor:pointer;z-index:2;
+  background:transparent url('assets/bulatanemas.png') center/contain no-repeat;
+  box-shadow:none;
+  animation:floatSeal 2.4s ease-in-out infinite;
+  transition:.6s ease;
+}
+.seal span{font-weight:700;color:#5a4114;opacity:0;transition:.25s}.seal:hover span{opacity:1}
+.tap-hint{position:absolute;top:calc(50% + 84px);font-size:12px;letter-spacing:.14em;color:#fff6;transition:.35s}
+@keyframes floatSeal{50%{transform:translateY(-8px)}}
+.cover-ornament{
+  position:absolute;
+  left:3%;
+  width:94%;
+  height:42%;
+  object-fit:fill;
+  pointer-events:none;
+  z-index:1;
+  transition:transform 1.25s cubic-bezier(.68,-.2,.28,1.08),opacity .9s ease;
+}
+.cover-ornament-top{top:1%}
+.cover-ornament-bottom{bottom:1%;transform:rotate(180deg)}
+.school-header{
+  margin:0 auto 34px;width:84%;height:58px;background:linear-gradient(#fff7ce,#ffe082);
+  border-radius:0 0 18px 18px;color:#036041;display:flex;align-items:center;gap:8px;padding:7px 12px;
+  box-shadow:0 6px 16px rgba(0,0,0,.15);
+}
+.logo-circle{width:42px;height:42px;border:2px solid #272012;border-radius:50%;display:grid;place-items:center;font-size:8px;color:#272012;font-weight:700;flex:none}
+.school-text{flex:1;min-width:0}.school-text h1{font-size:14px;margin:0;font-weight:800;letter-spacing:.02em}.school-text p{margin:0;color:#6b4b20;font-size:8px;letter-spacing:.32em}.mini-logos{font-size:14px;font-weight:800;color:#0e8b48;line-height:.9}.mini-logos small{color:#d79817;font-size:8px}
+.section{min-height:100vh;padding:34px 26px;display:flex;flex-direction:column;justify-content:center;position:relative}
+.hero{padding-top:72px}.soft-card{min-height:410px;display:grid;place-items:center}
+.script{font-family:'Brittany Signature','Great Vibes',cursive;font-weight:400}.big{font-size:55px;line-height:1.08;text-align:center;color:#e9ddd5;text-shadow:0 2px 10px rgba(0,0,0,.18)}
+.curve-line{position:absolute;width:115%;height:105px;border:4px solid #315d4f;border-top:0;border-right:0;border-left:0;border-radius:50%;left:-35%;bottom:20%;transform:rotate(-4deg);opacity:.75}
+.title{font-size:56px;text-align:center;margin:10px 0 22px}.photo-stack{display:flex;gap:8px;justify-content:center}.polaroid{margin:0;background:#fff;padding:10px 10px 32px;width:48%;height:145px;box-shadow:0 8px 18px rgba(0,0,0,.24)}.polaroid.small{height:120px}.rotate-left{transform:rotate(-8deg)}.rotate-right{transform:rotate(8deg)}
+.dummy-photo,.memory-card{height:100%;display:grid;place-items:center;background:linear-gradient(135deg,#dedbd0,#9da992);color:#514d45;font-size:13px;text-align:center}
+.student-row{height:310px;margin:-5px -20px 0;position:relative}.student{position:absolute;bottom:0;width:88px;height:170px;background:linear-gradient(#f2c7aa 0 28%,#fff 28% 100%);border:5px solid #fff;border-radius:44px 44px 16px 16px;box-shadow:0 5px 0 rgba(255,255,255,.7),0 8px 18px rgba(0,0,0,.25)}.student:after{content:"";position:absolute;left:34px;top:58px;width:19px;height:96px;background:#8e1025}.s1{left:0;bottom:12px}.s2{left:52px;bottom:42px}.s3{left:108px;bottom:86px}.s4{left:168px;bottom:65px}.s5{right:94px;bottom:86px}.s6{right:42px;bottom:46px}.s7{right:0;bottom:12px}
+.memories{justify-content:flex-start;padding-top:72px}.left-title{text-align:left;margin:0 0 20px}.memory-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.memory-card{min-height:125px;background:linear-gradient(135deg,#f7f3e7,#8fa189);border:9px solid #fff;box-shadow:0 8px 18px rgba(0,0,0,.22);transform:rotate(var(--r))}.m1{--r:0deg}.m2{--r:3deg}.m3{--r:-2deg}.m4{--r:1deg}.m5{--r:2deg;grid-column:1/3}.m6{--r:-3deg}.infinite-bottom{font-size:55px;text-align:right;margin:28px 8px 0}
+.paper{width:calc(100% + 40%);margin:0 -18px;transform:translateX(-50px);background:url('assets/backgroundayat.png') center/100% 100% no-repeat;color:#211a18;text-align:center;padding:44px 100px 90px}.surah{font-family:'Cormorant Garamond',serif;font-size:16px}.arabic{font-family:'Times New Roman',serif;font-size:27px;line-height:1.95}.arabic.verse{font-size:24px}.translation{font-family:'Cormorant Garamond',serif;font-size:17px;line-height:1.25;font-weight:600}
+.invite{text-align:center;font-family:'Cormorant Garamond',serif;padding:70px 28px 92px}.spaced{letter-spacing:.4em;font-family:Montserrat,sans-serif;font-size:26px}.invite p{font-family:Montserrat,sans-serif}.invite h2{font-size:32px;margin:8px 0;font-weight:700}.spark{font-size:30px;color:var(--gold)}.desc{font-size:18px;line-height:1.35}.invite h3{font-size:30px;letter-spacing:.12em;line-height:1.18;margin:18px 0}.angkatan{font-size:20px;line-height:1.35}.small-desc{font-weight:700;margin-top:36px}.event-row{display:grid;grid-template-columns:1fr .9fr 1fr;gap:12px;align-items:center;margin:22px 0;color:#fff6d2}.event-row>div{border-top:2px solid var(--gold);border-bottom:2px solid var(--gold);padding:8px 0;font-size:20px;font-weight:700}.event-row .date{border:0;display:grid;color:#fff}.date b{font-size:28px}.date span{font-size:29px}.date small{font-size:21px}.invite h4{font-size:25px;letter-spacing:.06em;margin:22px 0 8px}.address{font-size:20px;line-height:1.35}.gold-corner{position:absolute;width:60px;height:60px;border:4px double var(--gold);opacity:.8}.gold-corner.tl{top:18px;left:-24px;border-right:0;border-bottom:0;border-radius:28px 0 0 0}.gold-corner.tr{top:18px;right:-24px;border-left:0;border-bottom:0;border-radius:0 28px 0 0}
+.footer-bar{position:sticky;bottom:14px;margin:0 auto;width:92%;height:50px;border-radius:22px;background:linear-gradient(#fff2bd,#ffd76d);color:#281d16;display:flex;align-items:center;justify-content:space-around;font-size:14px;font-weight:600;z-index:3;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .85s ease, transform .85s ease}.reveal.visible{opacity:1;transform:none}
+@media (max-width:360px){.big{font-size:46px}.invite h3{font-size:25px}.school-text h1{font-size:12px}.student{width:78px}.title{font-size:49px}}
