@@ -67,7 +67,7 @@ body{
   margin:auto;
   background:
     linear-gradient(120deg,rgba(255,255,255,.08) 34%,rgba(255,255,255,.02) 34% 100%),
-    url('assets/backgroundsekolah.png') center/cover no-repeat;
+    url('assets/backgroundsekolah.webp') center/cover no-repeat;
   transform:scale(1.05);
   z-index:0;
 }
@@ -107,7 +107,7 @@ body{
 .gate-line{position:absolute;top:0;bottom:0;width:1px;background:rgba(0,0,0,.3)}
 .seal{
   width:122px;height:122px;border-radius:50%;border:0;cursor:pointer;z-index:2;
-  background:transparent url('assets/bulatanemas.png') center/contain no-repeat;
+  background:transparent url('assets/bulatanemas.webp') center/contain no-repeat;
   box-shadow:none;
   animation:floatSeal 2.4s ease-in-out infinite;
   transition:.6s ease;
@@ -272,7 +272,7 @@ body{
   .left-title{font-size:70px;margin-left:18px}
   .memory-grid{min-height:630px}
 }
-.paper{width:calc(100% + 52px);margin:0 -26px;background:url('assets/backgroundayat.png') center/100% 100% no-repeat;color:#211a18;text-align:center;padding:44px 72px 90px;transform:none}.surah{font-family:'Cormorant Garamond',serif;font-size:16px}.arabic{font-family:'Times New Roman',serif;font-size:27px;line-height:1.95}.arabic.verse{font-size:24px}.translation{font-family:'Cormorant Garamond',serif;font-size:17px;line-height:1.25;font-weight:600}
+.paper{width:calc(100% + 52px);margin:0 -26px;background:url('assets/backgroundayat.webp') center/100% 100% no-repeat;color:#211a18;text-align:center;padding:44px 72px 90px;transform:none}.surah{font-family:'Cormorant Garamond',serif;font-size:16px}.arabic{font-family:'Times New Roman',serif;font-size:27px;line-height:1.95}.arabic.verse{font-size:24px}.translation{font-family:'Cormorant Garamond',serif;font-size:17px;line-height:1.25;font-weight:600}
 .invite{
   text-align:center;
   padding:78px 24px 92px;

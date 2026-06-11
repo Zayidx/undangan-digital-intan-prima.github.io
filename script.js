@@ -10,7 +10,7 @@ const countdownCaption = document.getElementById('countdownCaption');
 const bgMusic = document.getElementById('bgMusic');
 const musicToggle = document.getElementById('musicToggle');
 
-const eventDate = new Date('2026-06-21T10:00:00+07:00');
+const eventDate = new Date('2026-06-21T08:30:00+07:00');
 let musicShouldPlay = true;
 
 function padNumber(value){
